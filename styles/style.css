@@ -5,11 +5,35 @@ body {
 .container {
   padding: 40px;
 }
+.container__input input {
+  background-color: #c3b091;
+  border: 5px solid #fff;
+  color: #8e806a;
+  font-size: 24px;
+  width: 300px;
+  height: 50px;
+  border-radius: 30px;
+  text-indent: 20px;
+  font-weight: bold;
+}
+.container__input button {
+  background-color: #c3b091;
+  border: 3px solid #8e806a;
+  color: #ffe6bc;
+  padding: 20px 50px;
+  margin-top: 10px;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 18px;
+  cursor: pointer;
+}
+.container input:focus {
+  outline: none;
+}
 .container__meals {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  row-gap: 30px;
 }
 .container__meals__card {
   background-color: #c3b091;
@@ -18,21 +42,28 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  padding: 10px;
+  padding: 20px;
+  margin-bottom: 30px;
 }
-.container__meals .button {
-  color: red;
-  padding: 15px 50px;
-  margin-top: 10px;
-  border-radius: 30px;
-  cursor: pointer;
-  background-color: #8e806a;
+.container__meals__card > p {
   color: #ffe6bc;
-  border: 3px solid #8e806a;
+  font-size: 24px;
   font-weight: bold;
 }
+.container__meals .button {
+  background-color: #8e806a;
+  border: 3px solid #8e806a;
+  color: #ffe6bc;
+  padding: 20px 50px;
+  margin-top: 10px;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 18px;
+  cursor: pointer;
+}
 .container__meals img {
-  width: 50%;
+  width: 400px;
+  height: 250px;
 }
 .container__meals button {
   width: -moz-fit-content;
@@ -61,20 +92,20 @@ body {
   overflow-y: auto;
 }
 .modal a {
-  color: white;
+  color: #fff;
   font-size: 24px;
   font-weight: bold;
 }
 
 #icon {
+  background-color: #fff;
   width: 50px;
-  cursor: pointer;
   position: fixed;
   z-index: 2;
   top: 120px;
   right: 200px;
-  background-color: white;
   display: none;
+  cursor: pointer;
 }
 
 #error {

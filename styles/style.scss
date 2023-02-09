@@ -1,43 +1,78 @@
 @import "config";
 
 body {
-  background-color: #8e806a;
+  background-color: $color-bg;
 }
 
 .container {
   padding: 40px;
+
+  &__input {
+    input {
+      background-color: $color-bg-cards;
+      border: 5px solid $color-white;
+      color: $color-bg;
+      font-size: 24px;
+      width: 300px;
+      height: 50px;
+      border-radius: 30px;
+      text-indent: 20px;
+      font-weight: bold;
+    }
+    button {
+      background-color: $color-bg-cards;
+      border: 3px solid $color-bg;
+      color: $color-text;
+      padding: 20px 50px;
+      margin-top: 10px;
+      border-radius: 30px;
+      font-weight: bold;
+      font-size: 18px;
+      cursor: pointer;
+    }
+  }
+
+  input:focus {
+    outline: none;
+  }
 
   &__meals {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
 
-    row-gap: 30px;
-
     &__card {
-      background-color: #c3b091;
+      background-color: $color-bg-cards;
       width: 30%;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: space-between;
-      padding: 10px;
+      padding: 20px;
+      margin-bottom: 30px;
+
+      > p {
+        color: $color-text;
+        font-size: 24px;
+        font-weight: bold;
+      }
     }
 
     .button {
-      color: red;
-      padding: 15px 50px;
+      background-color: $color-bg;
+      border: 3px solid $color-bg;
+      color: $color-text;
+      padding: 20px 50px;
       margin-top: 10px;
       border-radius: 30px;
-      cursor: pointer;
-      background-color: #8e806a;
-      color: #ffe6bc;
-      border: 3px solid #8e806a;
       font-weight: bold;
+      font-size: 18px;
+      cursor: pointer;
     }
 
     img {
-      width: 50%;
+      width: 400px;
+      height: 250px;
     }
 
     button {
@@ -70,25 +105,25 @@ body {
   }
 
   a {
-    color: white;
+    color: $color-white;
     font-size: 24px;
     font-weight: bold;
   }
 }
 
 #icon {
+  background-color: $color-white;
   width: 50px;
-  cursor: pointer;
   position: fixed;
   z-index: 2;
   top: 120px;
   right: 200px;
-  background-color: white;
   display: none;
+  cursor: pointer;
 }
 
 #error {
-  color: #ceab93;
+  color: $color-error-text;
   font-size: 25px;
   font-weight: bold;
 }
