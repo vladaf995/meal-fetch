@@ -1,0 +1,94 @@
+@import "config";
+
+body {
+  background-color: #8e806a;
+}
+
+.container {
+  padding: 40px;
+
+  &__meals {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    row-gap: 30px;
+
+    &__card {
+      background-color: #c3b091;
+      width: 30%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px;
+    }
+
+    .button {
+      color: red;
+      padding: 15px 50px;
+      margin-top: 10px;
+      border-radius: 30px;
+      cursor: pointer;
+      background-color: #8e806a;
+      color: #ffe6bc;
+      border: 3px solid #8e806a;
+      font-weight: bold;
+    }
+
+    img {
+      width: 50%;
+    }
+
+    button {
+      width: fit-content;
+    }
+  }
+}
+
+.modal {
+  position: fixed;
+  background-color: rgba($color: black, $alpha: 0.7);
+  margin: 100px;
+  height: 500px;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  display: none;
+  padding: 50px;
+
+  p {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  .scorll {
+    height: 200px;
+    overflow-y: auto;
+  }
+
+  a {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+  }
+}
+
+#icon {
+  width: 50px;
+  cursor: pointer;
+  position: fixed;
+  z-index: 2;
+  top: 120px;
+  right: 200px;
+  background-color: white;
+  display: none;
+}
+
+#error {
+  color: #ceab93;
+  font-size: 25px;
+  font-weight: bold;
+}
